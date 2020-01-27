@@ -18,7 +18,9 @@ public class BulletBehaviour : MonoBehaviour
     }
     private void OnDisable()
     {
+        Destroy(gameObject);
         this.transform.gameObject.SetActive(false);
+        
         
         
     }
