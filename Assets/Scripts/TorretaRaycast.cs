@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class TorretaRaycast : MonoBehaviour
 {
+    [SerializeField] public float shootDuration;
     public Transform Target;
     public Rigidbody projectile;
 
-    float distancia = 60;
+    float distancia = 30;
 
     void Update()
     {
@@ -22,19 +23,15 @@ public class TorretaRaycast : MonoBehaviour
                 Vector3 ray = transform.TransformDirection(Vector3.forward) * 1000;
                 Debug.DrawRay(transform.position, ray, Color.red);
                 Rigidbody clone;
+                new WaitForSeconds(shootDuration);
                 clone = Instantiate(projectile, transform.position, transform.rotation);
 
-                // Give the cloned object an initial velocity along the current
-                // object's Z axis
-                clone.velocity = transform.TransformDirection(Vector3.forward * 30);
+                clone.velocity = transform.TransformDirection(Vector3.forward * 25);
             }
             else
             {
                 ResetRot();
             }
-
-
-
         }
     }
 

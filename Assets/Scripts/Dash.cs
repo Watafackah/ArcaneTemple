@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class Dash : ability
 {
@@ -19,6 +20,7 @@ public class Dash : ability
     {
         if (Input.GetKey(KeyCode.X))
         {
+            Debug.Log("Using Dash!");
             StartCoroutine(Cast());
         }
         if (Input.GetKey(KeyCode.Space))
@@ -32,11 +34,11 @@ public class Dash : ability
         // GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * dashForce, ForceMode.Impulse);
         //rb.AddForce(Camera.main.transform.forward * dashForce, ForceMode.VelocityChange);
         rb.velocity = (Camera.main.transform.forward * dashForce);
-        rb.isKinematic = true;
+        rb.isKinematic = false;
 
         yield return new WaitForSeconds(dashDuration);
 
         rb.velocity = Vector3.zero;
-        rb.isKinematic = false;
+        rb.isKinematic = true;
     }
 }

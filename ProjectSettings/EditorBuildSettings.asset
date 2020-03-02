@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ShooterMagiaMain.unity
+    guid: e0bb2fcab83a6d748a537ea834724073
+  m_configObjects: {}
