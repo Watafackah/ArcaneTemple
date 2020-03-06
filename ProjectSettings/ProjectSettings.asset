@@ -721,10 +721,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 3a08cd0f-6069-4783-9175-ef8020f36453
   framebufferDepthMemorylessMode: 0
-  projectName: EffectsExamples
-  organizationId: 
+  projectName: ShooterMagia
+  organizationId: bonet27
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

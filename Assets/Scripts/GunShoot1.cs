@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunShoot : MonoBehaviour
+public class GunShoot1 : MonoBehaviour
 {
     [SerializeField] public Transform Player;
     [SerializeField] public GameObject BulletHole;

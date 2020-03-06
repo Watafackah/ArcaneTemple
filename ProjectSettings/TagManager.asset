@@ -7,6 +7,11 @@ TagManager:
   - Shootable
   - Enemy
   - World
+  - Fire
+  - HandParts1
+  - HandParts2
+  - HandParts3
+  - HandParts4
   layers:
   - Default
   - TransparentFX

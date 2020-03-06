@@ -1,19 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private ExpBar ExpBar1;
-    public float exp;
-    private GuardarExp exp1;
+    public int HP;
+    public int HPMax = 150;
+    public int MP;
+    public int MPMax = 150;
+    public GameObject reloadBox;
+
+    void Start()
+    {
+        //reloadBox = GetComponent<Panel>();
+        reloadBox = GameObject.Find("Recargaa");
+    }
 
     void Update()
     {
-        if (exp >= .01f)
+        if(MP < 30)
         {
-            ExpBar1.SetSize(0.1f);
+            reloadBox.gameObject.SetActive(true);
+        }
+        else
+        {
+            reloadBox.gameObject.SetActive(false);
         }
 
+        if(Input.GetKey(KeyCode.R))
+        {
+            MP = MPMax;
+        }
+
+        void OnCollisionEnter(Collision col)
+        {
+            if (col.gameObject.name == "Cookie")
+            {
+                HP -= 10;
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void OnEnable()
     {
-        Invoke("OnDisable", 1.0f);
+            Invoke("OnDisable", 1.0f); 
     }
     private void OnDisable()
     {
